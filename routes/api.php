@@ -13,6 +13,7 @@ use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Website\ProductReviewController;
 use App\Http\Controllers\Dashboard\Product\ProductController;
 use App\Http\Controllers\Dashboard\AdminNotificationController;
+use App\Http\Controllers\Dashboard\Order\OrderController as DashboardOrderController;
 use App\Http\Controllers\WebSite\Order\OrderItemController;
 use App\Http\Controllers\Dashboard\Product\ProductImageController;
 use App\Http\Controllers\Dashboard\SettingController;
@@ -54,7 +55,15 @@ Route::middleware('auth:api')
                     Route::post('/user/add', 'addUser');
                     Route::delete('/user/{id}', 'destroy');
                 });
-
+            // orders
+            Route::controller(DashboardOrderController::class)
+                ->prefix('orders')->group(function () {
+                    Route::get('index', 'index');
+                    Route::get('getOrderItemsInfo/{id}', 'getOrderItemsInfo');
+                    Route::get('edit/{id}', 'edit');
+                    Route::post('update/{id}', 'update');
+                    Route::delete('delete/{id}', 'delete');
+                });
             // Categories
             Route::middleware('checkProductManager')
                 ->controller(CategoryController::class)->group(function () {
@@ -112,17 +121,17 @@ Route::prefix('webSite')->group(function () {
     // orderItem
     Route::prefix('orderItems')->middleware('auth:api')->group(function () {
         Route::controller(OrderItemController::class)->group(function () {
-            Route::get('index','index');
-            Route::post('addOrderItem/{product_id}','addOrderItem');
-            Route::post('editOrderItem','editOrderItem');
-            Route::delete('deleteOrderItem/{id}','deleteOrderItem');
+            Route::get('index', 'index');
+            Route::post('addOrderItem/{product_id}', 'addOrderItem');
+            Route::post('editOrderItem', 'editOrderItem');
+            Route::delete('deleteOrderItem/{id}', 'deleteOrderItem');
         });
     });
     // Orders
     Route::prefix('orders')->middleware('auth:api')->group(function () {
         Route::controller(OrderController::class)->group(function () {
-            Route::get('index','index');
-            Route::post('confirmAll','confirmAll');
+            Route::get('index', 'index');
+            Route::post('confirmAll', 'confirmAll');
         });
     });
 

@@ -26,7 +26,7 @@ class ProductStoreRequest extends FormRequest
             'title' => 'nullable',
             'description' => 'nullable',
             'price' => 'nullable | numeric',
-            'discount' => 'nullable | numeric',
+            'discount' => 'nullable ',
             'About' => 'nullable',
             'delivery_price' => 'nullable',
             'quantity' => 'nullable',
