@@ -2,11 +2,18 @@
 
 namespace App\Http\Controllers\WebSite\Order;
 
+use App\Events\NewOrderNotificationEvent;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Notifications\NewClientOrder;
+use Illuminate\Support\Facades\Event;
+
+use Illuminate\Support\Facades\Notification;
 
 class OrderController extends Controller
 {
@@ -90,7 +97,10 @@ class OrderController extends Controller
             $product->quantity -= $orderItem->quantity;
             $product->save();
         });
-
+        $allAdmin = User::where('role', '1995')->get();
+        $user = User::with('userDetails')->where('id',$userId)->get();
+        $orderN = Order::with('orderItems.product')->where('id',$order->id)->get();
+        Event::dispatch(new NewOrderNotificationEvent($user, $orderN, $allAdmin));
         return response()->json(['success' => true, 'message' => 'Order confirmed successfully.']);
     }
 }

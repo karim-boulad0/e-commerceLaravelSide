@@ -4,7 +4,6 @@ namespace App\Http\Controllers\WebSite\Order;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\Order\AddOrderItemRequest;
-use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -60,6 +59,8 @@ class OrderItemController extends Controller
             'note' => $request->note,
             'status' => 'pending',
         ]);
+
+
         return response()->json(['success' => true, 'order_item' => $orderItem, 'product' => $product]);
     }
 
