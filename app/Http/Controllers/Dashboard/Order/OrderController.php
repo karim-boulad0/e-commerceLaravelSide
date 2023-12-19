@@ -9,7 +9,9 @@ use Spatie\QueryBuilder\QueryBuilder;
 use Spatie\QueryBuilder\AllowedFilter;
 use Illuminate\Database\Eloquent\Builder;
 use App\Http\Requests\Dashboard\Order\UpdateOrderRequest;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Event;
+use App\Events\ChangeStatusNotificationEvent;
 class OrderController extends Controller
 {
 
@@ -53,6 +55,7 @@ class OrderController extends Controller
                         'note' => $order->note,
                         'totalPrice' => $totalPrice,
                         'countOrderItems' => $order->orderItems->where('status', 'confirmed')->count(),
+                        'countProducts' => $order->orderItems->where('status', 'confirmed')->sum('quantity'),
                         'name' => $order->user->userDetails->first_name,
                         'address' => $order->user->userDetails->address,
                         'phone_number' => $order->user->userDetails->phone_number,
@@ -91,6 +94,8 @@ class OrderController extends Controller
         $order->status = $request->input('status');
         $order->note = $request->input('note');
         $order->save();
+        $user = User::findOrFail($order->user_id);
+        Event::dispatch(new ChangeStatusNotificationEvent($user,$request->status));
         return response()->json(['message' => 'Order updated successfully', 'order' => $order]);
     }
 

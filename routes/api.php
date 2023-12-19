@@ -14,6 +14,7 @@ use App\Http\Controllers\Website\ProductReviewController;
 use App\Http\Controllers\Dashboard\Product\ProductController;
 use App\Http\Controllers\Dashboard\AdminNotificationController;
 use App\Http\Controllers\Dashboard\Order\OrderController as DashboardOrderController;
+use App\Http\Controllers\Dashboard\Order\OrderStatisticController;
 use App\Http\Controllers\WebSite\Order\OrderItemController;
 use App\Http\Controllers\Dashboard\Product\ProductImageController;
 use App\Http\Controllers\Dashboard\SettingController;
@@ -55,6 +56,12 @@ Route::middleware('auth:api')
                     Route::post('/user/add', 'addUser');
                     Route::delete('/user/{id}', 'destroy');
                 });
+
+            //order Statistics
+            Route::controller(OrderStatisticController::class)->group(function () {
+                Route::get('/order/statistic/{day}/{month}/{year}/{status}', 'statistic');
+                Route::get('/order/statistic/productsAreAboutRunOut', 'productsAreAboutRunOut');
+            });
             // orders
             Route::controller(DashboardOrderController::class)
                 ->prefix('orders')->group(function () {

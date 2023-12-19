@@ -4,6 +4,7 @@ namespace App\Http\Controllers\WebSite\Order;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\Order\AddOrderItemRequest;
+use App\Http\Requests\WebSite\EditOrderItemRequest;
 use App\Models\OrderItem;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -64,22 +65,38 @@ class OrderItemController extends Controller
         return response()->json(['success' => true, 'order_item' => $orderItem, 'product' => $product]);
     }
 
-    public function editOrderItem(Request $request)
+
+
+    private function updateProductQuantity(Product $product, OrderItem $orderItem, Request $request)
+    {
+        $quantityChange = $request->quantity - $orderItem->quantity;
+
+        if ($request->status == 'confirmed') {
+            if ($orderItem->status == 'pending') {
+                $product->quantity -= $orderItem->quantity;
+            } elseif ($orderItem->status == 'confirmed') {
+                $product->quantity -= $quantityChange;
+            }
+        } elseif ($request->status == 'pending' && $orderItem->status == 'confirmed') {
+            $product->quantity += $orderItem->quantity;
+        }
+
+        // Ensure the product's quantity does not go below zero
+        $product->quantity = max(0, $product->quantity);
+
+        $product->save();
+    }
+    public function editOrderItem(EditOrderItemRequest $request)
     {
         $orderItem = OrderItem::with('product')->find($request->id);
 
         if (!$orderItem) {
             return response()->json(['error' => 'Order item not found'], 404);
         }
-        if ($request->status == 'confirmed' && $orderItem->status == 'pending') {
-            $product = Product::find($orderItem->product->id);
-            $product->quantity -=  $orderItem->quantity;
-            $product->save();
-        } elseif ($request->status == 'pending' && $orderItem->status == 'confirmed') {
-            $product = Product::find($orderItem->product->id);
-            $product->quantity +=  $orderItem->quantity;
-            $product->save();
-        }
+
+        $product = Product::find($orderItem->product->id);
+
+        $this->updateProductQuantity($product, $orderItem, $request);
 
         $orderItem->update([
             'quantity' => $request->quantity,
@@ -87,9 +104,8 @@ class OrderItemController extends Controller
             'status' => $request->status,
         ]);
 
-        return response()->json(['message' => 'success update', 'id' => $request->id, 'orderItem' => $orderItem]);
+        return response()->json(['message' => 'Success update', 'id' => $request->id, 'orderItem' => $orderItem]);
     }
-
     public function deleteOrderItem($id)
     {
         $orderItem = OrderItem::with(['product', 'order' => function ($query) {
