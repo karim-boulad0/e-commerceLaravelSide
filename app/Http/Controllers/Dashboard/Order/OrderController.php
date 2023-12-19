@@ -63,10 +63,10 @@ class OrderController extends Controller
                 });
                 return $formatOrders;
             } else {
-                echo 'No confirmed orders found.';
+                //
             }
         } else {
-            echo 'No orders found.';
+            //
         }
     }
 
