@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::latest()->take(3)->get();
+        $products = Product::where('status','published')->latest()->take(3)->get();
         return response()->json($products);
     }
     // app/Models/Product.php
@@ -20,7 +20,7 @@ class ProductController extends Controller
 
     public function getBestProducts()
     {
-        $products = Product::with('Images')->get();
+        $products = Product::with('Images')->where('status','published')->get();
 
         // Calculate weighted average rating for each product
         foreach ($products as $product) {
@@ -36,7 +36,7 @@ class ProductController extends Controller
         $sortedProducts = $products->sortByDesc('average_rate');
 
         // Retrieve the top five products
-        $topFiveProducts = $sortedProducts->take(6);
+        $topFiveProducts = $sortedProducts->take(20);
 
         return $topFiveProducts;
     }

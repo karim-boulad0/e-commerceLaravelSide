@@ -73,8 +73,10 @@ class OrderController extends Controller
     }
 
 
-    public function confirmAll()
+    public function confirmAll(Request $request)
     {
+        // $table->enum('payment_method', ['net', 'on_delivery'])->default('on_delivery');
+$request->validate(['payment_method'=>'required']);
         // Get the authenticated user's ID
         $userId = auth()->user()->id;
 
@@ -89,6 +91,10 @@ class OrderController extends Controller
 
         // Create a new order
         $order = Order::create(['user_id' => $userId]);
+        if($request){
+            $order->payment_method = $request->payment_method;
+            $order->save();
+        }
 
         // Update order_id in existing order items
         $userOrderItems->each(function ($orderItem) use ($order) {
@@ -98,8 +104,8 @@ class OrderController extends Controller
             $product->save();
         });
         $allAdmin = User::where('role', '1995')->get();
-        $user = User::with('userDetails')->where('id',$userId)->get();
-        $orderN = Order::with('orderItems.product')->where('id',$order->id)->get();
+        $user = User::with('userDetails')->where('id', $userId)->get();
+        $orderN = Order::with('orderItems.product')->where('id', $order->id)->get();
         Event::dispatch(new NewOrderNotificationEvent($user, $orderN, $allAdmin));
         return response()->json(['success' => true, 'message' => 'Order confirmed successfully.']);
     }

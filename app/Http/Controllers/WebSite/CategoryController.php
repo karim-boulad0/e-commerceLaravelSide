@@ -16,7 +16,7 @@ class CategoryController extends Controller
         // latest () it shows the newest first
         // skip (1) means the first category i don't want show
         // take(2) show just two categories
-        $categories = Category::with('products')->latest()->take(6)->get();
+        $categories = Category::with('products')->latest()->take(30)->get();
         return $categories;
     }
     public function all(Request $request)
@@ -51,7 +51,10 @@ class CategoryController extends Controller
             if (!$category) {
                 return response()->json(['error' => 'Category not found'], 404);
             }
-            return $category->products;
+            return response()->json([
+             'data'  => $category->products,
+             'category'=>$category->title,
+            ]);
         } catch (\Exception $e) {
             return response()->json(['error' => 'Internal Server Error'], 500);
         }

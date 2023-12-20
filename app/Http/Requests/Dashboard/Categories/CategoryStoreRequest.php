@@ -23,7 +23,7 @@ class CategoryStoreRequest extends FormRequest
     {
         return [
             'title' => 'nullable',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:3048',
         ];
     }
 }

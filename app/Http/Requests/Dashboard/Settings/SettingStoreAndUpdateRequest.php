@@ -28,8 +28,8 @@ class SettingStoreAndUpdateRequest extends FormRequest
             'site_name' => 'required|string',
             'phone_number' => 'required|string',
             'email' => 'required|email',
-            'icon' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp,ico|max:2048',
-            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp,ico|max:2048',
+            'icon' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp,ico|max:3048',
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp,ico|max:3048',
         ];
     }
 }
