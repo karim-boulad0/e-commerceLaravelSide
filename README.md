@@ -13,6 +13,9 @@ Make sure you have the following software installed:
 ## Laravel Side
 
 after  Clone the repository.
+```bash 
+git clone https://github.com/karim-boulad0/e-commerceLaravelSide.git
+```
 
 1. Install Composer dependencies:
 
@@ -45,6 +48,9 @@ after  Clone the repository.
 ## React Side
 
 after  Clone the repository.
+```bash 
+git clone https://github.com/karim-boulad0/e-commerceReactSide.git
+```
 
 1. Install Node.js dependencies:
 
