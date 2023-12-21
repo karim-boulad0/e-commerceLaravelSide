@@ -1,5 +1,6 @@
 /.phpunit.cache
 /node_modules
+RoadMap.md
 /public/build
 /public/hot
 /public/storage
