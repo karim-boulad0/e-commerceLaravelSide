@@ -1,26 +1,123 @@
+# Project Name
 
-# E-Commerce Dashboard
+e-commerce project
 
-Welcome to the E-Commerce Dashboard, a comprehensive solution for managing users, products, orders, and statistics.
+## Table of Contents
 
-## Overview
-
-The E-Commerce Dashboard provides a user-friendly interface for administrators to handle various aspects of the e-commerce platform, including user management, product management, order processing, and statistical analysis.
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+  - [Laravel Side](#laravel-side)
+  - [React Side](#react-side)
+- [E-Commerce Dashboard](#e-commerce-dashboard)
+  - [Overview](#overview)
+  - [Features](#dashboard-features)
+    - [Registration and Login](#registration-and-login)
+    - [User Roles](#user-roles)
+    - [Dashboard Pages](#dashboard-pages)
+    - [Notifications](#notifications)
+    - [Filters](#filters)
+  - [Dashboard Side](#dashboard-side)
+- [E-Commerce Website](#e-commerce-website)
+  - [Features](#website-features)
+    - [Product Browsing](#product-browsing)
+    - [Search Functionality](#search-functionality)
+    - [User Authentication](#user-authentication)
+    - [Real-time Notifications](#real-time-notifications)
+    - [Contact Us (Footer)](#contact-us-footer)
+- [Responsive Design](#responsive-design)
 
 ## Features
 
-### Registration and Login
+Welcome to the E-Commerce project, a comprehensive solution for managing users, products, orders, and statistics.
+
+## Prerequisites
+
+Make sure you have the following software installed:
+
+- PHP version 8.1
+- Laravel Framework version 10.10
+- React version 18.2.0
+
+## Installation
+
+### Laravel Side
+
+1. Clone the repository:
+    ```bash 
+    git clone https://github.com/karim-boulad0/e-commerceLaravelSide.git
+    ```
+
+2. Install Composer dependencies:
+    ```bash
+    composer install
+    ```
+
+3. Run migrations and seed the database:
+    ```bash
+    php artisan migrate --seed
+    ```
+    This will create an admin account with the following credentials:
+    - Email: admin@gmail.com
+    - Password: admin123$%
+
+4. Generate Passport client for personal access:
+    ```bash
+    php artisan passport:client --personal
+    ```
+
+5. Start the Laravel server:
+    ```bash
+    php artisan serve
+    ```
+
+### React Side
+
+1. Clone the repository:
+    ```bash 
+    git clone https://github.com/karim-boulad0/e-commerceReactSide.git
+    ```
+
+2. Install Node.js dependencies:
+    ```bash
+    npm install
+    ```
+
+3. Start the React development server:
+    ```bash
+    npm start
+    ```
+
+4. Open [http://localhost:3000/index/homepage](http://localhost:3000/index/homepage) in your browser.
+
+5. Click on the "Login" button in the right side of the top bar.
+
+6. Enter the following login credentials:
+    - Email: admin@gmail.com
+    - Password: admin123$%
+
+Now you should be able to use the application!
+
+## E-Commerce Dashboard
+
+### Overview
+
+The E-Commerce Dashboard provides a user-friendly interface for administrators to handle various aspects of the e-commerce platform, including user management, product management, order processing, and statistical analysis.
+
+### Dashboard Features
+
+#### Registration and Login
 
 - Users can register for an account or log in using traditional credentials.
 - Google Sign-In is available for a seamless authentication process.
 
-### User Roles
+#### User Roles
 
 - **Admin:** Has full permissions to access all dashboard features.
 - **Product Manager:** Can add and edit products.
 - **User:** Regular user role with standard functionalities.
 
-### Dashboard Pages
+#### Dashboard Pages
 
 - **User Management:** Add, edit, and delete users.
 - **Category Management:** Create, edit, and delete product categories.
@@ -29,16 +126,16 @@ The E-Commerce Dashboard provides a user-friendly interface for administrators t
 - **Statistics:** Track product quantities and sales on a monthly, yearly, and daily basis.
 - **Settings:** Manage profile information, including email, phone, etc.
 
-### Notifications
+#### Notifications
 
 - Receive notifications for new orders.
 - Track unread notifications in the top bar.
 
-### Filters
+#### Filters
 
 - Apply filters on various dashboard pages for enhanced data visibility.
 
-## Dashboard Side
+### Dashboard Side
 
 In addition to the core features, the dashboard side includes:
 
@@ -47,19 +144,23 @@ In addition to the core features, the dashboard side includes:
 - **Statistics:** Access detailed statistics on product quantities and sales.
 - **Settings:** Manage profile information and receive notifications.
 
-
 ## E-Commerce Website
+
+### Website Features
 
 Explore a wide range of products and enjoy a seamless shopping experience on our E-Commerce Website.
 
-### Features
+#### Product Browsing
 
-- **Product Browsing:** Explore products from different categories.
-- **Search Functionality:** Find specific products easily.
-- **User Authentication:** Register, log in, and manage your profile.
-- **Google Sign-In:** Sign up or log in using Google credentials.
-- **Shopping Cart:** Add products to the cart and proceed to checkout.
-- **Order History:** View past orders and their status.
+- Explore products from different categories.
+
+#### Search Functionality
+
+- Find specific products easily.
+
+#### User Authentication
+
+- Register, log in, and manage your profile.
 
 #### Real-time Notifications
 
@@ -69,78 +170,11 @@ Explore a wide range of products and enjoy a seamless shopping experience on our
 
 - **Email Us:** Use the contact form in the footer to send an email to the owner.
 
-# Project Name
+## Responsive Design
 
-e-commerce project
+The E-Commerce project is designed to be responsive on all screen sizes, ensuring a seamless experience for users on various devices. The responsiveness is optimized for the following screen categories:
 
-## Requirements
-
-Make sure you have the following software installed:
-
-- PHP version 8.1
-- Laravel Framework version 10.10
-- React version 18.2.0
-
-## Laravel Side
-
-after  Clone the repository.
-```bash 
-git clone https://github.com/karim-boulad0/e-commerceLaravelSide.git
-```
-
-1. Install Composer dependencies:
-
-    ```bash
-    composer install
-    ```
-
-2. Run migrations and seed the database:
-
-    ```bash
-    php artisan migrate --seed
-    ```
-
-    This will create an admin account with the following credentials:
-    - Email: admin@gmail.com
-    - Password: admin123$%
-
-3. Generate Passport client for personal access:
-
-    ```bash
-    php artisan passport:client --personal
-    ```
-
-4. Start the Laravel server:
-
-    ```bash
-    php artisan serve
-    ```
-
-## React Side
-
-after  Clone the repository.
-```bash 
-git clone https://github.com/karim-boulad0/e-commerceReactSide.git
-```
-
-1. Install Node.js dependencies:
-
-    ```bash
-    npm install
-    ```
-
-2. Start the React development server:
-
-    ```bash
-    npm start
-    ```
-
-3. Open [http://localhost:3000/index/homepage](http://localhost:3000/index/homepage) in your browser.
-
-4. Click on the "Login" button in the right side of the top bar.
-
-5. Enter the following login credentials:
-    - Email: admin@gmail.com
-    - Password: admin123$%
-
-Now you should be able to use the application!
+- **lg (Large Screens)**
+- **md (Medium Screens)**
+- **sm (Small Screens)**
+- **xs (Extra Small Screens)**
