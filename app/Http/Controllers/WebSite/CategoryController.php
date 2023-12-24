@@ -11,12 +11,18 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function index()
+
+    public function index(Request $request)
     {
-        // latest () it shows the newest first
-        // skip (1) means the first category i don't want show
-        // take(2) show just two categories
-        $categories = Category::with('products')->latest()->take(30)->get();
+        $categories = QueryBuilder::for(Category::class)
+            ->allowedFilters([
+                AllowedFilter::callback('item', function (Builder $query, $value) {
+                    $query->where('title', 'like', "%{$value}%");
+                }),
+            ])
+            ->take(30)
+            ->orderBy('created_at', 'desc')
+            ->get();
         return $categories;
     }
     public function all(Request $request)

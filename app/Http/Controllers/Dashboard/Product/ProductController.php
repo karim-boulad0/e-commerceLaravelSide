@@ -46,9 +46,28 @@ class ProductController extends Controller
             ->with('Images', 'category')
             ->orderBy('created_at', 'desc')
             ->get();
+        if ($products->count() > 0) {
+            $formatProducts =     $products->map(function ($product) {
+                return [
+                    'image' => $product->Images[0]->image,
+                    'title' => $product->title,
+                    'category' => $product->category,
+                    'description' => $product->description,
+                    'rating' => $product->rating,
+                    'ratings_number' => $product->ratings_number,
+                    'status' => $product->status,
+                    'price' => $product->price,
+                    'discount' => $product->discount,
+                    'delivery_price' => $product->delivery_price,
+                    'About' => $product->About,
+                    'quantity' => $product->quantity,
+                    'id' => $product->id,
+                ];
+            });
+        }
 
         return response()->json([
-            'products' => $products
+            'products' => $formatProducts
         ], 200);
     }
 
