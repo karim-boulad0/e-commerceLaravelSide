@@ -1,0 +1,1798 @@
+{
+	"info": {
+		"_postman_id": "23aed913-7a51-4af2-8c28-c29ccc83940e",
+		"name": "E-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26053342"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "karim",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "karim2001@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "karim13245",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "karim13245",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{MainURL}}register",
+							"host": [
+								"{{MainURL}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rami@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "rami12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{MainURL}}login",
+							"host": [
+								"{{MainURL}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTRlNzIyNGUxOTQ3MjA4YTNhNmRhMTk4MzNkYzA3ZWRlMzg1MjE5NWQyMWFhYjVlMGU5MjI2YWFiODYyNmMwODMxMGNmMWQ5NGYyMjdmMjAiLCJpYXQiOjE3MDE2MjY2NDguNjQ3ODk4LCJuYmYiOjE3MDE2MjY2NDguNjQ3OTA0LCJleHAiOjE3MTc0Mzc4NDguNDM5MzE0LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.yHIS85Q7ECuqyVY1AlgJfiu-b6odeSlzlX23W1YdPtLrexKyXb2FZTkIxVmVCD5U6eLfJZr9DFYoIzEiPqCscye9UR7sV-jpvIBFDP2ZqzTP-kfhAqbjSQDMyn_97hL7KQQFOTNewyHVRQT9WGEFreWldxtr7CPM2DVZtLZSdqKPOkkw69ZhPatuLNvwEBVR7ylm48QOHIGbZUCmSI7EJs3KgZT-1CFOoEjP4ZFzwqjKFs3wGKDpyj-xq4CzX6tq5dZehIqFmc1VZ5HtsKH_Qv-qx-OQxCTlTb51mzo3H3nrduZAhfI2dolFus50ORVL4NSxCFLQbGHKCK7bpi_HVPlc7XUdW6JO548Gh5f_u5hzYWDMPuP1y5sL8TtIfQbLhEavIXDb3IvAW8NfgWGIMWrEhTb5MpZc7M_FwgDvUMa4GT_MguF4QiUkOt8JWJzGcoTjtdwu2a0b4yBx4PuhR7qieDq7xJYYdOKvtmFl-v_uWwKiCxIHzRQt4FJm1FRtvSao2EU-yqF0AU2bSYHqvd7p86prkAFt_-RGLQZIZ0Vo_sDZWLiaawI4E1zLj1upHy7LOATKu0jjP2V_jqo9XHxuPueGlgZ_ciRbwQ_2KtwhPhWdiUFSheFcnNA4j_jSkVIBJmNgD42F1uHzjtcjaQRBgu1-4XcuPP8AwqXg7BI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{MainURL}}logout",
+							"host": [
+								"{{MainURL}}logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "images",
+							"item": [
+								{
+									"name": "add images of product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "product_id",
+													"value": "17",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"type": "file",
+													"src": "/C:/Users/myName/Pictures/Saved Pictures/sapan-patel-i9Q9bc-WgfE-unsplash.jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{MainURL}}dashboard/product-img/add",
+											"host": [
+												"{{MainURL}}dashboard"
+											],
+											"path": [
+												"product-img",
+												"add"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete image  by id id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "product_id",
+													"value": "12",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"type": "file",
+													"src": "/C:/Users/myName/Pictures/Saved Pictures/sapan-patel-i9Q9bc-WgfE-unsplash.jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{MainURL}}dashboard/product-img/112",
+											"host": [
+												"{{MainURL}}dashboard"
+											],
+											"path": [
+												"product-img",
+												"112"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "images of a product by its id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "product_id",
+													"value": "12",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"type": "file",
+													"src": "/C:/Users/myName/Pictures/Saved Pictures/sapan-patel-i9Q9bc-WgfE-unsplash.jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{MainURL}}dashboard/images/28",
+											"host": [
+												"{{MainURL}}dashboard"
+											],
+											"path": [
+												"images",
+												"28"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "all published  products",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/products",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "About",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "discount",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "delivery_price",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "100",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/product/add",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"product",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit product with its images",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "new",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "new",
+											"type": "text"
+										},
+										{
+											"key": "About",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "90",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "discount",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "delivery_price",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "100",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/product/edit/48",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"product",
+										"edit",
+										"48"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get product  by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "About",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "25",
+											"type": "text"
+										},
+										{
+											"key": "discount",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "delivery_price",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "100",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/product/47",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"product",
+										"47"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get products by filter",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "About",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "25",
+											"type": "text"
+										},
+										{
+											"key": "discount",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "delivery_price",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "100",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/filterProducts?filter[item]=nature",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"filterProducts"
+									],
+									"query": [
+										{
+											"key": "filter[item]",
+											"value": "nature"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete product with its images",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "About",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "25",
+											"type": "text"
+										},
+										{
+											"key": "discount",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "delivery_price",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "100",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/product/46",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"product",
+										"46"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Categories",
+					"item": [
+						{
+							"name": "get categories using filter",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/categories?filter[item]=gamings",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"categories"
+									],
+									"query": [
+										{
+											"key": "filter[item]",
+											"value": "gamings"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get category by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/category/9",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"category",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete category by id Copy",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/category/11",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"category",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create new category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "postman test two",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/myName/Pictures/Saved Pictures/sapan-patel-i9Q9bc-WgfE-unsplash.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/category/add",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"category",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update  category by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "test request",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/category/edit/9",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"category",
+										"edit",
+										"9"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "AdminNotifications",
+					"item": [
+						{
+							"name": "get all notifications",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/admin/notification/all",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"admin",
+										"notification",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get notification by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/admin/notification/getById/6f03dfbd-fe6b-4bd2-8119-e43dc8579e2b",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"admin",
+										"notification",
+										"getById",
+										"6f03dfbd-fe6b-4bd2-8119-e43dc8579e2b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get count Unread Notifications",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/admin/notification/countUnreadNotifications",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"admin",
+										"notification",
+										"countUnreadNotifications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get Unread Notifications",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/admin/notification/unreadNotifications",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"admin",
+										"notification",
+										"unreadNotifications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "mark All notifications As Read",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/admin/notification/markAllAsRead",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"admin",
+										"notification",
+										"markAllAsRead"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "mark As Read By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/admin/notification/markAsReadById/6f03dfbd-fe6b-4bd2-8119-e43dc8579e2b",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"admin",
+										"notification",
+										"markAsReadById",
+										"6f03dfbd-fe6b-4bd2-8119-e43dc8579e2b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete all notifications",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/admin/notification/deleteAll",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"admin",
+										"notification",
+										"deleteAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete notification By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/admin/notification/deleteById/6f03dfbd-fe6b-4bd2-8119-e43dc8579e2b",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"admin",
+										"notification",
+										"deleteById",
+										"6f03dfbd-fe6b-4bd2-8119-e43dc8579e2b"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/users",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "userByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/user/1",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user who has auth",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/user",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editUser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "karim11",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "karim@karim.com",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "1995",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/user/edit/1",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"user",
+										"edit",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "karim",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "karim2121@karim.com",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "1995",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "karim12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/user/add",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"user",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "destroyUser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/user/27",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"user",
+										"27"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "orders by use filter",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/order/index?filter[item]=karim",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"order",
+										"index"
+									],
+									"query": [
+										{
+											"key": "filter[item]",
+											"value": "karim"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sum Received Orders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/order/sumReceivedOrders",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"order",
+										"sumReceivedOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "count Received Orders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/order/countReceivedOrders",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"order",
+										"countReceivedOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "topSellingProducts",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/order/topSellingProducts",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"order",
+										"topSellingProducts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sumReceivedOrdersByMonth",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/order/sumReceivedOrdersByMonth/11",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"order",
+										"sumReceivedOrdersByMonth",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sumReceivedOrdersByMonthAndYear",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/order/sumReceivedOrdersByMonthAndYear/11/2023",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"order",
+										"sumReceivedOrdersByMonthAndYear",
+										"11",
+										"2023"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllYearsAndMonthsWithOrders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/order/getAllYearsAndMonthsWithOrders",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"order",
+										"getAllYearsAndMonthsWithOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sumReceivedOrdersByMonthAndYearAndStatus",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/order/getAllYearsAndMonthsWithOrders",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"order",
+										"getAllYearsAndMonthsWithOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CounttotalOrders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/order/CountTotalOrders",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"order",
+										"CountTotalOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update order by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "status",
+											"value": "approved",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/order/edit/273",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"order",
+										"edit",
+										"273"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update order by id Copy",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "status",
+											"value": "approved",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/order/delete/273",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"order",
+										"delete",
+										"273"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Settings",
+					"item": [
+						{
+							"name": "show settings",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{MainURL}}dashboard/settings/index",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"settings",
+										"index"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update settings",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "icon",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "logo",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "site_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{MainURL}}dashboard/settings/update",
+									"host": [
+										"{{MainURL}}dashboard"
+									],
+									"path": [
+										"settings",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "MainURL",
+			"value": "http://127.0.0.1:8000/api/",
+			"type": "string"
+		}
+	]
+}
