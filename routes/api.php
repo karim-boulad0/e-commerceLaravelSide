@@ -13,6 +13,7 @@ use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Website\ProductReviewController;
 use App\Http\Controllers\Dashboard\Product\ProductController;
 use App\Http\Controllers\Dashboard\AdminNotificationController;
+use App\Http\Controllers\Dashboard\BannerController;
 use App\Http\Controllers\Dashboard\Order\OrderController as DashboardOrderController;
 use App\Http\Controllers\Dashboard\Order\OrderStatisticController;
 use App\Http\Controllers\WebSite\Order\OrderItemController;
@@ -24,6 +25,7 @@ use App\Http\Controllers\WebSite\ProductController as WebSiteProductController;
 use App\Http\Controllers\WebSite\CategoryController as WebSiteCategoryController;
 use App\Http\Controllers\WebSite\ClientNotificationController;
 use App\Http\Controllers\WebSite\Order\OrderController;
+use App\Models\Banner;
 
 /*     ---- Auth [Public Routes] ----       */
 
@@ -80,6 +82,14 @@ Route::middleware('auth:api')
                     Route::post('/category/edit/{id}', 'edit');
                     Route::delete('/category/{id}', 'destroy');
                 });
+            // banners
+            Route::middleware('checkProductManager')->controller(BannerController::class)->group(function () {
+                Route::get('/banners', 'index');
+                Route::post('/banner/store', 'store');
+                Route::get('/banner/{id}', 'show');
+                Route::post('/banner/edit/{id}', 'edit');
+                Route::delete('/banner/{id}', 'destroy');
+            });
 
             // products
             Route::middleware('checkProductManager')

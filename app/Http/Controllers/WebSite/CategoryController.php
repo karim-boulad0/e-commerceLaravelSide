@@ -21,7 +21,7 @@ class CategoryController extends Controller
                 }),
             ])
             ->take(30)
-            ->orderBy('created_at', 'desc')
+            ->orderBy('id', 'desc')
             ->get();
         return $categories;
     }
